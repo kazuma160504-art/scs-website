@@ -1,0 +1,10 @@
+{
+  "_comment": "公開して問題ない団体基本情報。個人の連絡先・学籍番号は data/private/（暗号化して data/*.enc.json）で管理する。",
+  "asOf": "2025-05",
+  "totalCount": 27,
+  "composition": "医学生23名＋薬学部・理工学部",
+  "advisor": {
+    "name": "市場正良",
+    "affiliation": "佐賀大学医学部"
+  }
+}

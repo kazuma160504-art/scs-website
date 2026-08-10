@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" role="img" aria-label="学外イベントのイメージ">
+  <rect width="240" height="160" rx="12" fill="#F0E9D8"/>
+  <text x="120" y="80" font-size="48" text-anchor="middle">🌏</text>
+  <text x="120" y="130" font-size="14" text-anchor="middle" fill="#6B655B" font-family="sans-serif" font-weight="bold">学外イベント</text>
+</svg>

@@ -1,0 +1,62 @@
+{
+  "fiscalYear": "2026年度",
+  "regular": [
+    {
+      "id": "greenbook",
+      "title": "greenbook 学習支援",
+      "rule": { "type": "weekly", "weekday": 3 },
+      "time": "14:00〜17:00",
+      "location": "TODO: 要確認",
+      "category": "kids",
+      "emoji": "📚"
+    },
+    {
+      "id": "johoku-salon",
+      "title": "城北団地サロン",
+      "rule": { "type": "monthly-weekday", "week": 1, "weekday": 0 },
+      "time": "9:30〜11:30",
+      "location": "城北団地",
+      "category": "senior",
+      "emoji": "🌻"
+    },
+    {
+      "id": "happy-cafe",
+      "title": "ハッピーカフェ",
+      "rule": { "type": "monthly-weekday", "week": 4, "weekday": 6 },
+      "time": "10:00〜12:00",
+      "location": "東高木公民館",
+      "category": "senior",
+      "emoji": "☕"
+    },
+    {
+      "id": "sand-cafe",
+      "title": "サンドカフェ",
+      "rule": { "type": "monthly-weekday", "week": 3, "weekday": 6 },
+      "time": "10:00〜12:00",
+      "location": "本庄公民館",
+      "category": "kids",
+      "emoji": "🥪"
+    },
+    {
+      "id": "kamitakagi",
+      "title": "上高木公民館 子供の居場所づくり",
+      "rule": { "type": "monthly-tbd" },
+      "time": "14:30〜16:30",
+      "location": "上高木公民館",
+      "category": "kids",
+      "emoji": "🎈",
+      "note": "TODO: 要確認 — 開催日（毎月の曜日・週）を確認して rule を設定する"
+    }
+  ],
+  "special": [
+    {
+      "date": "2026-04-01",
+      "title": "材木町公民館サロン（初開催）",
+      "time": "TODO: 要確認",
+      "location": "材木町公民館",
+      "category": "senior",
+      "emoji": "🌸",
+      "note": "2026年度の新規開催。詳細は決定次第更新。"
+    }
+  ]
+}

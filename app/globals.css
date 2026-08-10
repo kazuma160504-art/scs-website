@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-ink antialiased;
+  }
+  /* MDX 本文の見た目（prose プラグインなしの軽量版） */
+  .mdx-body h2 {
+    @apply mt-10 mb-4 text-2xl font-black text-ink border-l-4 border-leaf-500 pl-3;
+  }
+  .mdx-body h3 {
+    @apply mt-8 mb-3 text-xl font-bold text-ink;
+  }
+  .mdx-body p {
+    @apply my-4 leading-relaxed text-ink;
+  }
+  .mdx-body ul {
+    @apply my-4 list-disc space-y-1 pl-6;
+  }
+  .mdx-body ol {
+    @apply my-4 list-decimal space-y-1 pl-6;
+  }
+  .mdx-body a {
+    @apply text-leaf-700 underline hover:text-leaf-500;
+  }
+  .mdx-body blockquote {
+    @apply my-6 border-l-4 border-apricot-300 bg-apricot-50 px-4 py-3 rounded-r-lg;
+  }
+  .mdx-body strong {
+    @apply font-bold;
+  }
+  .mdx-body img {
+    @apply my-6 rounded-xl;
+  }
+  .mdx-body hr {
+    @apply my-8 border-cream-200;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
