@@ -58,11 +58,13 @@ scs-website/
 │   ├── activities/       # 活動レポート MDX（yyyy-mm-dd-slug.mdx）★部員が主に編集する場所
 │   └── pages/            # 理念・原点の本文 MDX
 ├── data/
-│   ├── members.json      # 部員名簿・役員・OBOG
-│   ├── partners.json     # 地域交流先
+│   ├── members.enc.json  # 部員名簿・役員・OBOG（暗号化済み）
+│   ├── partners.enc.json # 地域交流先（暗号化済み）
+│   ├── organization.json # 公開可能な団体基本情報（部員数・顧問名）
 │   ├── awards.json       # 表彰歴・助成金
 │   ├── events.json       # 定例活動・予定イベント（カレンダーの元データ）
-│   └── checklists.json   # 活動別の準備物・当日フロー
+│   ├── checklists.json   # 活動別の準備物・当日フロー
+│   └── private/          # 平文の名簿・協力先（gitignore済み・役員のみ保持）
 ├── lib/                  # コンテンツ読み込み・カテゴリ定義・認証
 └── public/
     ├── images/activities # 活動写真
@@ -76,7 +78,7 @@ scs-website/
 
 - **活動レポートを書く** → `content/activities/2026-05-10-johoku-salon.mdx` のようにファイルを追加
 - **予定イベントを追加** → `data/events.json` の `special` に1件追加
-- **協力先を追加** → `data/partners.json` に1件追加
+- **協力先・名簿を編集** → `data/private/*.json` を編集して `npm run encrypt-data`（役員のみ。詳細は「個人情報の取り扱い」参照）
 - **理念の本文を書く** → `content/pages/philosophy.mdx` を編集
 - **写真を追加** → `public/images/activities/` に置き、MDX から `![説明](/images/activities/xxx.jpg)` で参照
 
@@ -105,7 +107,7 @@ GitHub アカウントさえあればスマホからでも更新できます。�
 - [ ] Google Drive の共有 URL（components/footer.tsx, app/operations/page.tsx）
 - [ ] 結成年月日の確定日（content/pages/origin.mdx, app/origin/page.tsx）
 - [ ] 理念・原点の正式な本文（content/pages/*.mdx — 現在は仮置き）
-- [ ] 部員名簿の完全版（data/members.json — 現在は役員のみ）
+- [ ] 部員名簿の完全版（data/private/members.json を編集して npm run encrypt-data — 現在は役員のみ）
 - [ ] 参加申込・サロン依頼の Google Forms URL（app/plans, app/for-partners）
 - [ ] 提出書類 PDF の配置（public/documents/）
 - [ ] 古川先生寄付・SSF寄付の金額と時期（data/awards.json）
