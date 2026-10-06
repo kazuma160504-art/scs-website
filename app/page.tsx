@@ -81,12 +81,12 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.15}>
             <Image
-              src="/images/banners/hero.svg"
-              alt="SCS の活動風景（高齢者サロンや子ども支援のイラスト）"
-              width={640}
-              height={420}
+              src="/images/banners/hero.jpg"
+              alt="城北団地サロンで、学生が参加者の皆さんと一緒に健康体操をしている様子"
+              width={1600}
+              height={1200}
               priority
-              className="w-full rounded-3xl shadow-lg"
+              className="aspect-[4/3] w-full rounded-3xl object-cover shadow-lg"
             />
           </FadeIn>
         </div>

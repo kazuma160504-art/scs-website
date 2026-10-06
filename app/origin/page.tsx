@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getPage } from "@/lib/content";
 import { PageHeader, TodoNote, Card } from "@/components/ui";
@@ -22,6 +23,13 @@ export default function OriginPage() {
       />
       <div className="mx-auto max-w-3xl px-4 py-12">
         <FadeIn>
+          <Image
+            src="/images/activities/members-group.jpg"
+            alt="活動後に笑顔で集合写真を撮る SCS の部員たち"
+            width={1200}
+            height={900}
+            className="mb-8 aspect-[16/9] w-full rounded-2xl object-cover"
+          />
           <div className="mb-8 grid gap-4 sm:grid-cols-2">
             <Card className="p-5">
               <p className="text-sm font-bold text-ink-light">結成</p>

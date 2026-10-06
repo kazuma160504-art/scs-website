@@ -103,8 +103,9 @@ GitHub アカウントさえあればスマホからでも更新できます。�
 
 コード・データ内に `TODO: 要確認` として明示しています。確認先は部長（森一真）。
 
-- [ ] Instagram / Facebook の URL（components/footer.tsx, components/instagram-embed.tsx）
-- [ ] Google Drive の共有 URL（components/footer.tsx, app/operations/page.tsx）
+- [x] Instagram の URL（@scs.official2025 — 設定済み）
+- [ ] Facebook の URL（アカウントがあれば components/footer.tsx に設定）
+- [x] Google Drive の共有 URL（設定済み）
 - [ ] 結成年月日の確定日（content/pages/origin.mdx, app/origin/page.tsx）
 - [ ] 理念・原点の正式な本文（content/pages/*.mdx — 現在は仮置き）
 - [ ] 部員名簿の完全版（data/private/members.json を編集して npm run encrypt-data — 現在は役員のみ）

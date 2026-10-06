@@ -67,11 +67,18 @@ export default function OperationsPage() {
                 <FolderOpen className="h-6 w-6 text-apricot-500" aria-hidden /> 資料の格納先
               </span>
             </SectionTitle>
-            <Card className="p-6">
-              <TodoNote>
-                TODO: 要確認 — Google Drive の共有 URL が確定したら、components/footer.tsx の SNS.drive
-                とこのセクションにリンクを設定してください。
-              </TodoNote>
+            <Card className="flex flex-wrap items-center justify-between gap-4 p-6">
+              <p className="text-sm leading-relaxed text-ink-light">
+                活動写真・議事録・各種資料は共有ドライブに格納しています（部員のみアクセス可）。
+              </p>
+              <a
+                href="https://drive.google.com/drive/folders/1s7ULpa6azJ4fPzaSq-ZmP1T6VBQ7FdSd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-leaf-600 px-6 py-3 text-sm font-bold text-white hover:bg-leaf-700"
+              >
+                <FolderOpen className="h-4 w-4" aria-hidden /> Google Drive を開く
+              </a>
             </Card>
           </section>
         </FadeIn>

@@ -5,6 +5,13 @@ import Image from "next/image";
 import { CATEGORIES, type CategoryKey } from "@/lib/categories";
 import { cn } from "@/lib/utils";
 
+// 実写真があるカテゴリはここで割り当てる（ないものはプレースホルダ画像のまま）
+const TAB_IMAGES: Partial<Record<CategoryKey, string>> = {
+  senior: "/images/activities/johoku-taiso.jpg",
+  kids: "/images/activities/kids-asobi.jpg",
+  community: "/images/activities/chiiki-event-gym.jpg",
+};
+
 /** 活動カテゴリ別紹介のタブ */
 export function CategoryTabs() {
   const [active, setActive] = useState<CategoryKey>("senior");
@@ -45,10 +52,10 @@ export function CategoryTabs() {
           <p className="leading-relaxed text-ink-light">{current.description}</p>
         </div>
         <Image
-          src={`/images/activities/placeholder-${current.key}.svg`}
-          alt={`${current.label}のイメージ`}
-          width={240}
-          height={160}
+          src={TAB_IMAGES[current.key] ?? `/images/activities/placeholder-${current.key}.svg`}
+          alt={`${current.label}の活動の様子`}
+          width={360}
+          height={240}
           className="h-40 w-full rounded-xl object-cover"
         />
       </div>

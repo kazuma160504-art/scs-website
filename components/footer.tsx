@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { Instagram, Facebook, FolderOpen, Mail, MapPin } from "lucide-react";
 
-// TODO: 要確認 — Instagram / Facebook / Google Drive の URL を設定する
 const SNS = {
-  instagram: "", // 例: https://www.instagram.com/scs_saga/
-  facebook: "",
-  drive: "",
+  instagram: "https://www.instagram.com/scs.official2025/",
+  facebook: "", // TODO: 要確認 — Facebook の URL（アカウントがあれば）
+  drive: "https://drive.google.com/drive/folders/1s7ULpa6azJ4fPzaSq-ZmP1T6VBQ7FdSd",
 };
 
 const FOOTER_LINKS = [

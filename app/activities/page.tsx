@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Award, Trophy } from "lucide-react";
 import { getActivities } from "@/lib/content";
-import { CATEGORIES } from "@/lib/categories";
 import { formatDateJa } from "@/lib/utils";
-import { PageHeader, Card, SectionTitle, Badge } from "@/components/ui";
+import { PageHeader, Card, SectionTitle } from "@/components/ui";
 import { FadeIn } from "@/components/fade-in";
 import { CategoryTabs } from "@/components/category-tabs";
 import { ActivityTimeline } from "@/components/activity-timeline";
+import { PhotoGallery } from "@/components/photo-gallery";
 import awards from "@/data/awards.json";
 
 export const metadata: Metadata = {
@@ -82,27 +81,10 @@ export default function ActivitiesPage() {
         {/* 写真ギャラリー */}
         <FadeIn>
           <section aria-labelledby="gallery-heading">
-            <SectionTitle sub="活動写真は public/images/activities に追加すると表示されます（現在はプレースホルダ画像です）。">
+            <SectionTitle sub="カテゴリで絞り込めます。写真の追加方法は CONTRIBUTING.md を参照してください。">
               <span id="gallery-heading">📷 写真ギャラリー</span>
             </SectionTitle>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-              {CATEGORIES.map((c) => (
-                <figure key={c.key}>
-                  <Image
-                    src={`/images/activities/placeholder-${c.key}.svg`}
-                    alt={`${c.label}の活動写真（準備中）`}
-                    width={240}
-                    height={160}
-                    className="h-36 w-full rounded-xl object-cover"
-                  />
-                  <figcaption className="mt-2 text-center">
-                    <Badge className={c.color}>
-                      {c.emoji} {c.label}
-                    </Badge>
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
+            <PhotoGallery />
           </section>
         </FadeIn>
       </div>
