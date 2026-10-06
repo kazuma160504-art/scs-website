@@ -130,6 +130,6 @@ data/partners.enc.json       ← 暗号文（これだけコミットする）
 - `/members`・`/contacts` ページは、サーバー側で `MEMBERS_PASSWORD` を鍵に復号して表示する（閲覧合言葉と復号鍵は同じ値）
 - **名簿・協力先を編集する手順**：`data/private/*.json` を編集 → `npm run encrypt-data` → 生成された `*.enc.json` をコミット
 - **パスワードを変更したら**：`.env.local` と Vercel の環境変数を更新し、`npm run encrypt-data` で再暗号化してコミット
-- `data/private/` を持っていない部員（clone したばかり等）は名簿編集はできないが、サイトの閲覧・他の編集は問題なくできる。平文データは役員間で安全な手段（Drive の限定共有等）で受け渡すこと
+- `data/private/` を持っていない役員（clone したばかり等）は、合言葉を `.env.local` に設定して `npm run decrypt-data` を実行すると、暗号文から平文を復元して編集を始められる
 - 注意：万一 平文の JSON を一度でも push してしまった場合は、履歴に残るため「ファイルを消して push し直す」だけでは不十分。git 履歴の書き換え（git filter-repo など）と合言葉の変更を行うこと
 - 公開ページに載せている部長メールアドレス（お問い合わせ窓口）は意図的に公開している情報。窓口を変えたい場合は components/footer.tsx・app/donate・app/for-partners を編集

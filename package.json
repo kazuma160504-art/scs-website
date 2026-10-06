@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "encrypt-data": "node scripts/encrypt-data.mjs"
+    "encrypt-data": "node scripts/encrypt-data.mjs",
+    "decrypt-data": "node scripts/decrypt-data.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
